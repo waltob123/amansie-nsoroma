@@ -1,0 +1,591 @@
+body {
+    background-image: url('../images/new_hall.jpeg');
+}
+
+body::before {
+    content: '';
+    width: 100vw;
+    height: 100%;
+    background-color: var(--white5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+body.noscroll {
+    overflow: clip;
+}
+
+.container {
+    margin: 0 auto;
+}
+
+.container-sm {
+    width: 80%;
+    max-width: 700px;
+}
+
+.container-md {
+    width: 85%;
+    max-width: 950px;
+}
+
+.container-lg {
+    width: 90%;
+    max-width: 1200px;
+}
+
+.btn {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.btn:hover, .btn:focus {
+    opacity: .7;
+}
+
+.submit-btn {
+    display: inline-block;
+    background-color: var(--alternateBase);
+    color: var(--offWhite);
+}
+
+.flexbox {
+    display: flex;
+}
+
+.highlight, .active {
+    color: var(--alternateBase);
+}
+
+.icons {
+    width: 1rem;
+}
+
+.logo {
+    width: 3rem;
+    object-fit: cover;
+}
+
+header h1.title,
+footer h1.title {
+    font-size: var(--textSizeFive);
+    display: none;
+}
+
+/* Header */
+header {
+    padding-block: 1.5rem;
+    position: relative;
+}
+
+header div.flexbox {
+    justify-content: space-between;
+}
+
+header h1.title, header nav,
+header button, header div.hamburger {
+    align-self: center;
+}
+
+header h1.title {
+    color: var(--black75);
+}
+
+header nav a {
+    display: block;
+    padding: 0.5rem 1rem;
+}
+
+header nav ul {
+    position: relative;
+}
+
+.nav-item {
+    position: relative;
+    top: -20px;
+    opacity: 0;
+    animation: slide-in-top-zero 700ms ease-in-out forwards;
+}
+
+header nav a:hover,
+header nav a:focus {
+    color: var(--alternateBase);
+}
+
+button.upcoming-btn {
+    background-color: var(--black75);
+    color: var(--offWhite);
+    border-radius: 5px;
+}
+
+
+/* Hamburger */
+div.hamburger {
+    width: 30px;
+    height: 25px;
+    position: relative;
+    display: none;
+    z-index: 200;
+}
+
+div.hamburger:hover {
+    cursor: pointer;
+}
+
+div.hamburger span,
+div.hamburger span::before {
+    display: block;
+    width: 30px;
+    height: 4px;
+    background-color: var(--alternateBase);
+}
+
+div.hamburger span::before {
+    width: 20px;
+    position: absolute;
+    content: '';
+    bottom: 0;
+    right: 0;
+}
+
+div.hamburger span.open {
+    transform: translateY(9px) rotate(45deg);
+}
+
+div.hamburger span.open::before {
+    width: 100%;
+    transform: translateY(1px) rotate(90deg);
+}
+
+
+/* Hero */
+section#hero {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+section#hero div.flexbox {
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+section#hero .title,
+section#hero .subtitle,
+section#hero p.text {
+    position: relative;
+    left: -250px;
+    opacity: 0;
+}
+
+section#hero .title.show,
+section#hero .subtitle.show,
+section#hero p.text.show {
+    animation: slide-in-left-zero 700ms ease-in-out 100ms forwards;
+}
+
+section#hero div.flexbox .subtitle {
+    font-size: var(--textSizeThree);
+    color: var(--black75);
+    font-weight: 500;
+}
+
+section#hero div.flexbox .title {
+    font-size: var(--textSizeTwo);
+    color: var(--black75);
+}
+
+section#hero div.flexbox p.text {
+    color: var(--black75);
+    width: 60%;
+    margin-block-end: 0.5rem;
+}
+
+section#hero div.flexbox a.submit-btn {
+    align-self: flex-start;
+    position: relative;
+    bottom: -100px;
+    opacity: 0;
+}
+
+section#hero div.flexbox a.submit-btn.show {
+    animation: slide-in-bottom-zero 700ms ease-in-out 300ms forwards;
+}
+
+
+/* Services */
+section#services {
+    background-color: var(--black90);
+    padding-block: 10rem;
+    position: relative;
+}
+
+section#services h4 {
+    color: var(--offWhite);
+    font-size: var(--textSizeFour);
+    margin-block: 1.5rem;
+    position: relative;
+    top: -200px;
+    opacity: 0;
+}
+
+section#services h4.show {
+    animation: slide-in-top-zero 700ms ease-in-out 50ms forwards;
+}
+
+section#services div.flexbox {
+    justify-content: space-between;
+}
+
+section#services div.card {
+    background-color: var(--white5);
+    padding: 1rem 1.5rem;
+    align-self: flex-start;
+    width: 30%;
+    position: relative;
+    opacity: 0;
+    left: -100px;
+}
+
+section#services div.card.show {
+    animation: slide-in-left-zero 1000ms ease-in-out 500ms forwards;
+}
+
+div.card .card-title {
+    font-size: var(--textSizeFive);
+    margin-block-end: 1rem;
+    color: var(--secondary-color);
+}
+
+div.card .card-text {
+    color: var(--black75);
+}
+
+
+/* About us */
+section#about {
+    background-color: var(--offWhite);
+    padding-block: 10rem;
+    position: relative;
+}
+
+section#about h4 {
+    color: var(--secondary-color);
+    font-size: var(--textSizeFour);
+    margin-block: 1.5rem;
+    position: relative;
+    top: -200px;
+    opacity: 0;
+}
+
+section#about h4.show {
+    animation: slide-in-top-zero 700ms ease-in-out 100ms forwards;
+}
+
+section#about div.flexbox {
+    justify-content: space-between;
+}
+
+section#about div.flexbox .about-img,
+section#about div.flexbox .about-text {
+    width: 48%;
+    position: relative;
+}
+
+.about-img img{
+    display: block;
+}
+
+.about-img {
+    align-self: center;
+    left: -200px;
+    opacity: 0;
+}
+
+.about-text {
+    align-self: center;
+    right: -300px;
+    opacity: 0;
+}
+
+.about-img.show {
+    animation: slide-in-left-zero 700ms ease-in-out 200ms forwards;
+}
+
+.about-text.show {
+    animation: slide-in-right-zero 1000ms ease-in-out 700ms forwards;
+}
+
+section#about div.flexbox .about-img {
+    position: relative;
+}
+
+section#about div.flexbox .about-img::before,
+section#about div.flexbox .about-img::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+}
+
+section#about div.flexbox .about-img::before {
+    top: 0;
+    left: 0;
+    background-color: var(--alternateBaseTransparent);
+}
+
+section#about div.flexbox .about-img::after {
+    border: 5px solid var(--alternateBase);
+    top: 1rem;
+    left: 1rem;
+    z-index: -1;
+}
+
+section#about div.flexbox .about-img:hover::before {
+    display: none;
+}
+
+section#about div.flexbox .about-img:hover::after {
+    top: 0.5rem;
+    left: 0.5rem;
+}
+
+
+/* Slider */
+section#slider {
+    height: 350px;
+}
+
+/* Contact us */
+section#contact {
+    background-color: var(--black75);
+    padding-block: 10rem;
+}
+
+section#contact fieldset {
+    border-color: var(--offWhite);
+    padding: 2rem;
+}
+
+section#contact legend {
+    margin-inline-start: 2rem;
+    font-size: var(--textSizeFour);
+    color: var(--offWhite);
+}
+
+section#contact label {
+    color: var(--offWhite);
+}
+
+p.form-text {
+    color: var(--offWhite);
+    margin-block-end: 1.5rem;
+}
+
+.form-input {
+    width: 100%;
+    padding: 0.5rem;
+    color: var(--black75);
+    outline-color: var(--alternateBase);
+}
+
+.field {
+    margin-block-end: 1.5rem;
+}
+
+
+/* Footer */
+footer {
+    background-color: var(--black);
+    padding-block: 5rem;
+}
+
+footer h1.title {
+    color: var(--offWhite);
+    margin-block: 1.5rem;
+}
+
+footer div.flexbox {
+    justify-content: space-between;
+}
+
+footer div.flexbox h5.title {
+    color: var(--tetiary);
+    font-size: var(--textSizeSix);
+    margin-block-end: 1rem;
+}
+
+footer div.sitemap nav a {
+    color: var(--offWhite);
+}
+
+footer div.sitemap nav a:hover {
+    color: var(--tetiary);
+}
+
+footer div.sitemap nav li {
+    display: block;
+}
+
+footer div.social-media p.text {
+    color: var(--offWhite);
+    margin-block-end: 1rem;
+}
+
+div.social-media-icons a:not(:last-child) {
+    margin-inline-end: 0.3rem;
+}
+
+div.contact-info p,
+div.contact-info a {
+    color: var(--offWhite);
+}
+
+div.contact-info a:hover {
+    color: var(--tetiary);
+}
+
+.copyright {
+    background-color: var(--offWhite);
+}
+
+.copyright p {
+    text-align: center;
+}
+
+
+/* Media Queries */
+/* Mobile and tablet menu */
+@media screen and (max-width: 800px) {
+    /* nav */
+    header nav {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: -100%;
+        left: 0;
+        background-color: var(--black);
+        z-index: 100;
+    }
+
+    header nav.open {
+        animation: slide-in-top-zero 700ms ease-in-out forwards;
+    }
+
+    header nav li {
+        display: block;
+    }
+
+    header nav a {
+        color: var(--offWhite);
+        text-align: start;
+    }
+
+    header ul {
+        position: relative;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+    }
+
+    div.hamburger {
+        display: block;
+    }
+
+    button.upcoming-btn {
+        background-color: var(--alternateBase);
+        margin-inline-start: 1rem;
+        margin-block-start: 2rem;
+    }
+}
+
+/* Mobile */
+@media screen and (min-width: 280px) and (max-width: 320px) {
+    section#hero div.flexbox .subtitle {
+        font-size: var(--textSizeFive);
+    }
+
+    section#hero div.flexbox .title {
+        font-size: var(--textSizeThree);
+    }
+    
+    p, input, label, a {
+        font-size: 0.7rem;
+    }
+
+    section#contact div.container-sm {
+        width: 90%;
+    }
+}
+
+@media  screen and (min-width: 280px) and (max-width: 600px) {
+    section#hero div.flexbox p.text {
+        width: 100%;
+    }
+
+    section#services div.flexbox {
+        overflow-x: scroll;
+        gap: 2rem;
+        scroll-behavior: smooth;
+        scroll-snap-type: x mandatory;
+    }
+    
+    section#services div.card {
+        min-width: 80%;
+        scroll-snap-align: start;
+    }
+
+    section#about div.flexbox {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    section#about div.flexbox div.about-img, 
+    section#about div.flexbox div.about-text {
+        align-self: flex-start;
+        width: 100%;
+    }
+
+    section#contact fieldset {
+        padding-inline: 1rem;
+    }
+
+    footer div.flexbox {
+        flex-direction: column;
+        gap: 2rem;
+    }
+}
+
+
+/* Animations */
+    /* Nav menu slide in */
+    @keyframes slide-in-top-zero {
+        to {
+            top: 0;
+            opacity: 1;
+        }
+    }
+
+    @keyframes slide-in-left-zero {
+        to {
+            left: 0;
+            opacity: 1;
+        }
+    }
+
+    @keyframes slide-in-right-zero {
+        to {
+            right: 0;
+            opacity: 1;
+        }
+    }
+
+    @keyframes slide-in-bottom-zero {
+        to {
+            bottom: 0;
+            opacity: 1;
+        }
+    }
