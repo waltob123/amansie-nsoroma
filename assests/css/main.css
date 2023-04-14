@@ -238,6 +238,13 @@ section#services h4.show {
 
 section#services div.flexbox {
     justify-content: space-between;
+    position: relative;
+    left: -100px;
+    opacity: 0;
+}
+
+section#services div.flexbox {
+    animation: slide-in-left-zero 1000ms ease-in-out 500ms forwards;
 }
 
 section#services div.card {
@@ -245,13 +252,6 @@ section#services div.card {
     padding: 1rem 1.5rem;
     align-self: flex-start;
     width: 30%;
-    position: relative;
-    opacity: 0;
-    left: -100px;
-}
-
-section#services div.card.show {
-    animation: slide-in-left-zero 1000ms ease-in-out 500ms forwards;
 }
 
 div.card .card-title {
@@ -307,7 +307,6 @@ section#about div.flexbox .about-text {
 
 .about-text {
     align-self: center;
-    right: -20px;
     opacity: 0;
 }
 
