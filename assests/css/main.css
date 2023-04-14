@@ -307,7 +307,7 @@ section#about div.flexbox .about-text {
 
 .about-text {
     align-self: center;
-    right: -300px;
+    right: -20px;
     opacity: 0;
 }
 
