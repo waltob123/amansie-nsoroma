@@ -17,6 +17,10 @@ body.noscroll {
     overflow: clip;
 }
 
+body.black {
+    background-color: var(--black75);
+}
+
 .container {
     margin: 0 auto;
 }
@@ -455,6 +459,70 @@ div.contact-info a:hover {
     text-align: center;
 }
 
+#upcoming-events-container {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--black75);
+    justify-content: center;
+    align-items: center;
+    z-index: 300;
+}
+
+#upcoming-events {
+    max-width: 800px;
+    width: 80%;
+    max-height: 400px;
+    padding: 2rem;
+    margin: 0 auto;
+    background-color: var(--offWhite);
+    z-index: 3;
+    overflow-y: scroll;
+}
+
+#upcoming-events .flexbox {
+    justify-content: space-between;
+    margin-block-end: 1rem;
+}
+
+#upcoming-events .submit-btn {
+    margin-block-start: 0.5rem;
+}
+
+#upcoming-events .close-btn {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    align-self: center;
+    justify-self: center;
+}
+
+.event {
+    padding-block: 1rem;
+}
+
+.event h5 {
+    font-size: clamp(1.1rem, 5vw, 1.3rem);
+    color: var(--black60);
+}
+
+.event:not(:last-child) {
+    border-bottom: 1px solid var(--black25);
+}
+
+.event p span:last-child {
+    padding-inline-start: 0.5rem;
+}
+
+.event p span:first-child {
+    border-right: 1px solid var(--black90);
+    padding-inline-end: 0.5rem;
+}
+
+
+
 
 /* Media Queries */
 /* Mobile and tablet menu */
@@ -518,11 +586,19 @@ div.contact-info a:hover {
     section#contact div.container-sm {
         width: 90%;
     }
+
+    #upcoming-events h5 {
+        font-size: var(--textSizeSix);
+    }
 }
+
 
 @media  screen and (min-width: 280px) and (max-width: 600px) {
     section#hero div.flexbox p.text {
         width: 100%;
+    }
+    section#services div.flexbox::-webkit-scrollbar {
+        display: none;
     }
 
     section#services div.flexbox {
