@@ -17,10 +17,6 @@ body.noscroll {
     overflow: clip;
 }
 
-body.black {
-    background-color: var(--black75);
-}
-
 .container {
     margin: 0 auto;
 }
