@@ -469,9 +469,9 @@ div.contact-info a:hover {
 
 #upcoming-events {
     max-width: 800px;
-    width: 80%;
+    width: 90%;
     max-height: 400px;
-    padding: 2rem;
+    padding: 2rem 1rem;
     margin: 0 auto;
     background-color: var(--offWhite);
     z-index: 3;
