@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assests/css/resets.css">
+    <link rel="stylesheet" href="./assests/css/main.css">
+    <link rel="stylesheet" href="./assests/css/room.css">
+    <link rel="shortcut icon" href="./assests/images/n2.png" type="image/x-icon">
+    <script src="./assests/js/main.js" defer></script>
+    <title>Amansie Nsoroma | Book Room</title>
+</head>
+<body>
+    
+    <!-- Header -->
+    <header>
+        <div class="container container-lg flexbox">
+            <h1 class="title">Amansie <span class="highlight">Nsoroma</span></h1>
+            <img src="./assests/images/n2.png" alt="Company logo" class="logo">
+            <nav>
+                <ul>
+                    <li><a href="./index.html" class="nav-item">Home</a></li>
+                    <li><a href="./index.html#about" class="remove-nav nav-item">About</a></li>
+                    <li><a href="./index.html#contact" class="remove-nav nav-item">Contact</a></li>
+                    <li><a href="./room.html" class="active nav-item">Book room</a></li>
+                    <li><a href="./event.html" class="nav-item">Book space</a></li>
+                    <button class="btn upcoming-btn remove-nav nav-item">Upcoming Events</button>
+                </ul>
+            </nav>
+            <div class="hamburger">
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main -->
+    <main>
+        <!-- Book room -->
+        <section id="book-room" class="flexbox">
+            <div class="container container-sm">
+                <h3>Book Room</h3>
+                <p>
+                    Kindly fill the form below if you want a place to lodge for sometime.
+                </p>
+                <form action="" method="post">
+                    <div class="field">
+                        <label for="fullname">Full Name</label>
+                        <input type="text" name="fullname" id="fullname" class="form-input" placeholder="John Doe" required>
+                        <small class="error"></small>
+                    </div>
+                    <div class="contact-detail flexbox">
+                        <div class="field">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email" class="form-input" placeholder="someone@example.com" required>
+                            <small class="error"></small>
+                        </div>
+                        <div class="field">
+                            <label for="tel">Telephone</label>
+                            <input type="tel" name="tel" id="tel" class="form-input" minlength="10" maxlength="10" placeholder="024 000 0000" required>
+                            <small class="error"></small>
+                        </div>
+                    </div>
+                    <div class="date-time flexbox">
+                        <div class="field">
+                            <label for="date">Date</label>
+                            <input type="date" name="date" id="date" class="form-input" placeholder="" required>
+                            <small class="error"></small>
+                        </div>
+                        <div class="field">
+                            <label for="duration">Duration</label>
+                            <input type="number" name="duration" id="duration" min="1" class="form-input" placeholder="1" required>
+                            <small>Number of hours, days or weeks</small>
+                        </div>
+                        <div class="field">
+                            <label for="unit">Unit</label>
+                            <select name="unit" id="unit" class="form-input" required>
+                                <option value="hrs">hrs</option>
+                                <option value="days">days</option>
+                                <option value="weeks">weeks</option>
+                            </select>
+                            <small class="error"></small>
+                        </div>    
+                    </div>
+                    <div class="room flexbox">
+                        <div class="field">
+                            <label for="room">Room</label>
+                            <select name="room" id="room" class="form-input" required>
+                                <option value="bekwai">Bekwai</option>
+                                <option value="kokofu">Kokofu</option>
+                            </select>
+                            <small class="error"></small>
+                        </div>
+                        <div class="field">
+                            <label for="price">Price (Per hour)</label>
+                            <input type="number" name="price" id="price" min="1" step="0.01" class="form-input" placeholder="1" disabled required>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn submit-btn">Book Room</button>
+
+                </form>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container container-lg">
+            <h1 class="title">Amansie <span class="highlight">Nsoroma</span></h1>
+            <img src="./assests/images/n2.png" alt="company logo" class="logo">
+            <div class="flexbox">
+                <!-- Sitemap -->
+                <div class="sitemap">
+                    <h5 class="title">Sitemap</h5>
+                    <nav>
+                        <ul>
+                            <li><a href="./index.html">Home</a></li>
+                            <li><a href="./index.html#about">About</a></li>
+                            <li><a href="./index.html#contact">Contact</a></li>
+                            <li><a href="./room.html">Book room</a></li>
+                            <li><a href="./event.html">Book space</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                
+                <!-- Social media -->
+                <div class="social-media">
+                    <h5 class="title">Social media</h5>
+                    <p class="text">
+                        Connect with us via the following social media platforms.
+                    </p>
+                    <div class="social-media-icons">
+                        <a href="">
+                            <img src="./assests/images/icons/facebook.png" alt="Facebook" class="icons">
+                        </a>
+                        <a href="">
+                            <img src="./assests/images/icons/instagram.png" alt="Instagram" class="icons">
+                        </a>
+                        <a href="">
+                            <img src="./assests/images/icons/whatsapp.png" alt="Whatsapp" class="icons">
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Contact information -->
+                <div class="contact-info">
+                    <h5 class="title">Contact Info</h5>
+                    <p>
+                        <span>
+                            <img src="./assests/images/icons/mail-inbox-app.png" alt="Email" class="icons">
+                        </span>
+                        <a href="mailto:amansiensoroma2022@gmail.com">amansiensoroma2022@gmail.com</a>
+                    </p>
+                    <p>
+                        <span>
+                            <img src="./assests/images/icons/pin.png" alt="Location" class="icons">
+                        </span>
+                        <span>Bekwai - Ashanti Region</span>
+                    </p>
+                    <p>
+                        <span>
+                            <img src="./assests/images/icons/telephone.png" alt="Telephone" class="icons">
+                        </span>
+                        <span>+233 55 031 7208</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="copyright">
+        <p>
+            Copyright &copy; 2023 all rights reserved.
+        </p>
+    </div>
+</body>
+</html>

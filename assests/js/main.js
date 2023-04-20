@@ -74,7 +74,7 @@ function renderUpcomingEvents(events) {
     const closeBtn = document.createElement('img');
     closeBtn.setAttribute('class', 'close-btn');
     closeBtn.setAttribute('alt', 'Close button');
-    closeBtn.setAttribute('src', './assests/images/icons/close-btn.png');
+    closeBtn.setAttribute('src', './assests/images/icons/close-button.png');
 
     // append h3 and button to header
     header.appendChild(h3);

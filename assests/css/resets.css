@@ -66,7 +66,7 @@ h1, h2, h3, h4, h5, h6, legend {
     font-family: 'Petrona', serif;
 }
 
-p, li, a, button, label, input, small {
+p, li, a, button, label, input, small, select, option {
     font-family: 'Poppins', sans-serif;
     color: var(--black75);
 }
@@ -89,7 +89,10 @@ button {
     cursor: pointer;
 }
 
-label, input, small {
+label, input, small, select, option {
     display: block;
 }
 
+small {
+    font-size: 0.7rem;
+}
