@@ -1,5 +1,6 @@
 body {
     background-image: url('../images/new_hall.jpeg');
+    background-blend-mode: darken;
 }
 
 body::before {
@@ -248,20 +249,32 @@ section#services div.flexbox.show {
 }
 
 section#services div.card {
-    background-color: var(--white5);
-    padding: 1rem 1.5rem;
-    align-self: flex-start;
+    background-color: var(--offWhite);
+    padding: 1rem 0.5rem;
+    border-radius: 5px;
+    align-self: baseline;
     width: 30%;
 }
 
 div.card .card-title {
-    font-size: var(--textSizeFive);
+    font-size: 1.2rem;
     margin-block-end: 1rem;
-    color: var(--secondary-color);
+    color: var(--black75);
+    text-align: center;
+}
+
+div.card .card-image {
+    position: relative;
+    width: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-block-end: 0.5rem;
 }
 
 div.card .card-text {
     color: var(--black75);
+    text-align: center;
+    font-size: 0.8rem;
 }
 
 
